@@ -1,0 +1,529 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Common */
+
+html {
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.clear {
+    clear: both;
+}
+
+.text-white {
+    color: white !important;
+}
+
+.row {
+    margin: 0 -8px;
+}
+
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.col {
+    float: left;
+    padding: 0 8px;
+}
+
+.col-half {
+    width: 50%;
+}
+
+.col-third {
+    width: 33.33333%;
+}
+
+.col-full {
+    width: 100%;
+}
+
+.mt-8 {
+    margin-top: 8px;
+}
+
+.mt-16 {
+    margin-top: 16px;
+}
+
+.mt-32 {
+    margin-top: 32px;
+}
+
+/* Common */
+
+#header {
+    background-color: black;
+    height: 46px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}
+
+#nav {
+    display: inline-block;
+}
+
+#nav, .subnav  {
+    list-style-type: none;
+}
+
+#nav > li {
+    display:  inline-block;
+}
+
+#nav li {
+    position: relative;
+}
+
+#nav > li > a {
+    color: white;
+    text-transform: uppercase;
+}
+
+#nav li a {
+    text-decoration: none;
+    padding: 0 24px;
+    line-height: 46px;
+    font-size: 15px;
+}
+
+#nav .subnav {
+    position: absolute;
+    background-color: white;
+    width: 160px;
+    top: 100%;
+    left: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    display: none;
+}
+
+#nav .subnav a {
+    color: black;
+    padding: 0 12px;
+    line-height: 40px;
+}
+
+#nav .subnav li:hover {
+    background-color: #ccc;
+}
+
+#nav > li:hover > a {
+    background-color: #ccc;
+    color: black;
+    display: block;
+}
+
+#nav li:hover .subnav {
+    display: block;
+}
+
+#nav .ti-angle-down {
+    font-size: 13px; 
+}
+
+#header .mobile-menu-btn { /* Responsive mobile */
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+}
+
+#header .mobile-menu-btn, /* Responsive mobile */
+#header .search-btn {
+    float: right;
+    padding: 0 21px;
+}
+
+#header .search-btn:hover{
+    background-color: #f44336;
+    cursor: pointer;
+}
+
+#header .mobile-menu-btn:hover { /* Responsive mobile */
+    background-color: #ccc;
+} 
+
+#header .mobile-menu-btn:hover .menu-icon {  /* Responsive mobile */
+    color: black;
+}
+
+#header .menu-icon, /* Responsive mobile */
+#header .search-icon {
+    color: white;
+    font-size: 20px;
+    line-height: 46px;
+}
+
+#slider {
+    position: relative;
+    background: url('../img/slider/slider2.jpg') top center / cover no-repeat;
+    padding-top: 50%;
+    margin-top: 46px;
+}
+
+#slider .text-content {
+    position: absolute;
+    bottom: 47px;
+    color: white;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#slider .text-heading {
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+}
+
+#slider .text-desc {
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 25px;
+    text-shadow: 0 0 1px black;
+}
+
+#content .content-section{
+    width: 800px;
+    max-width: 100%; /* Responsive tablet */
+    padding: 64px 16px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#content .section-heading {
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: 4px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+#content .section-sub-heading {
+    font-size: 15px;
+    font-style: italic;
+    opacity: 0.5;
+    text-align: center;
+    margin: 15px 0;
+}
+
+#content .about-text {
+    font-size: 15px;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+#content .members-list {
+    padding: 47px 0;
+}
+
+#content .member-item {
+    text-align: center;
+    float: left;
+}
+
+#content .member-name {
+    font-size: 15px;
+}
+
+#content .member-img {
+    width: 153.59px;
+    border-radius: 4px;
+    margin-top: 15px;
+}
+
+#content .tour-section {
+    background-color: black;
+}
+
+#content .tickets-list {
+    background-color: white;
+    margin-top: 35px;
+    list-style-type: none;
+}
+
+#content .tickets-list li {
+    font-size: 15px;
+    padding: 11px 16px;
+    border-bottom: 1px solid #ddd;
+    color: #757575;
+}
+
+#content .sold-out {
+    background-color: #f44336;
+    color: white;
+    padding: 3px 7px;
+    margin-left: 16px;
+}
+
+#content .quantity {
+    background-color: black;
+    color: white;
+    float: right;
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    line-height: 24px;
+    border-radius: 50%;
+    margin-right: 16px;
+    margin-top: -3px;
+}
+
+.places-ticket {
+    margin: 16px -8px 0;
+    margin-bottom: 48px;
+}
+
+.place-item {
+    float: left;
+    padding: 0 8px;
+}
+
+.place-img {
+    width: 100%;
+    display: block;
+}
+
+.place-img:hover {
+    opacity: 0.8;
+}
+
+.place-body {
+    background-color: white;
+    padding: 15px;
+    
+}
+
+.place-heading {
+    font-size: 15px;
+}
+
+.place-time {
+    font-size: 15px;
+    margin: 15px 0;
+    opacity: 0.6;
+}
+
+.place-desc {
+    font-size: 15px;
+    margin: 15px 0;
+}
+
+.place-buy-btn {
+    font-size: 15px;
+    background-color: black;
+    color: white;
+    padding: 11px 16px;
+    border: none;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.place-buy-btn:hover {
+    background-color: #ccc;
+    color: black;
+}
+
+.contact-content {
+    margin-top: 47px;
+    margin-bottom: 40px;
+}
+
+.contact-info {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.contact-info i {
+    width: 30px;
+    display: inline-block;
+}
+
+.contact-info a {
+    color: #101aef;
+    opacity: 0.8;
+}
+
+.contact-info a:hover {
+    opacity: 1;
+}
+
+.contact-form {
+    font-size: 15px;
+}
+
+.contact-form .form-control {
+    padding: 11px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+.contact-form .form-submit-btn {
+    font-size: 15px;
+    background-color: black;
+    color: white;
+    float: right;
+    border: 1px solid black;
+    padding: 10px 16px;
+}
+
+.contact-form .form-submit-btn:hover {
+    background-color: #ccc;
+    border: 1px solid #ccc;
+    color: black;
+    cursor: pointer;
+}
+
+.map-section img {
+    width: 100%;
+    filter: grayscale(50%);
+}
+
+#footer {
+    padding: 64px 16px;
+    text-align: center;
+}
+
+#footer .social-list {
+    font-size: 24px;
+   
+}
+
+#footer .social-list a {
+    color: rgba(0, 0, 0, 0.6);
+    text-decoration: none;
+}
+
+#footer .copyright a,
+#footer .copyright {
+    color: rgba(0, 0, 0, 0.6);
+    margin: 15px 0;
+    font-size: 15px;
+}
+
+#footer .social-list a:hover,
+#footer .copyright a:hover {
+    opacity: 0.6;
+}
+
+/* Modal */
+
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.modal.open {
+    display: flex;
+}
+
+.modal-container {
+    background: white;
+    width: 900px;
+    min-height: 200px;
+    max-width: calc(100% - 32px);
+    position: relative;
+    animation: modalFaceIn ease 0.5s;
+}
+
+.modal-header {
+    background-color: #009688;
+    height: 130px;
+    color: white;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 4px;
+}
+
+.modal-heading-icon {
+    margin-right: 16px;
+}
+
+.modal-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: white;
+    padding: 12px;
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.modal-close:hover {
+    opacity: 1;
+}
+
+.modal-body {
+    padding: 16px;
+}
+
+.modal-label {
+    display: block;
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+
+.modal-input {
+    border: 1px solid #ccc;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 24px;
+}
+
+#buy-tickets {
+    background-color: #009688;
+    border: none;
+    color: white;
+    width: 100%;
+    font-size: 15px;
+    text-transform: uppercase;
+    padding: 16px;
+    cursor: pointer;
+}
+
+#buy-tickets:hover {
+    opacity: 0.8;
+}
+
+.modal-footer {
+    text-align: right;
+    font-size: 15px;
+    padding: 20px;
+}
+
+.modal-footer a {
+    color: #2196F3;
+}
+
+@keyframes modalFaceIn {
+    from {
+        opacity: 0;
+        transform: translateY(-140px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+} 
+
